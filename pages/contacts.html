@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUXTECH - Engineering Solutions</title>
+    <title>LUXTECH — Инженерные решения</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mobile-fixes.css">
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../mobile-fixes.css">
 
 
 </head>
@@ -28,35 +28,114 @@
 </div>
 
 <nav>
-    <div class="container">
-        <a href="contacts.html" class="logo">
-            <div class="logo-icon"><i class="far fa-square"></i></div>
-            LUXTECH
-        </a>
-        <ul class="nav-links">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="#">Решения <i class="fas fa-chevron-down nav-chevron"></i></a></li>
-            <li><a href="#">Проекты</a></li>
-            <li><a href="diodus.html">Продукция <i class="fas fa-chevron-down nav-chevron"></i></a></li>
-            <li><a href="supply.html">Услуги <i class="fas fa-chevron-down nav-chevron"></i></a></li>
-            <li><a href="about.html">О компании</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
+  <div class="container">
+    <a href="contacts.html" class="logo">
+      <div class="logo-icon"><i class="far fa-square"></i></div>
+      LUXTECH
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Главная</a></li>
+      <li class="nav-item has-dropdown">
+        <a href="#">Решения <i class="fas fa-chevron-down nav-chevron"></i></a>
+        <ul class="nav-dropdown">
+          <li><a href="lightpage.html">Световые решения</a></li>
+          <li><a href="lightpage2.html">Управление зданием</a></li>
+          <li><a href="lightpage3.html">Мультимедийные решения</a></li>
+          <li><a href="lightpage4.html">Инженерные системы</a></li>
+          <li><a href="lightpage5.html">Системы безопасности</a></li>
+          <li><a href="lightpage6.html">Строительство</a></li>
         </ul>
-        <a href="index.html" class="btn btn-primary">Получить консультацию</a>
+      </li>
+      <li><a href="projects.html">Проекты</a></li>
+      <li class="nav-item has-dropdown">
+        <a href="projects.html">Продукция<i class="fas fa-chevron-down nav-chevron"></i></a>
+        <ul class="nav-dropdown">
+          <li><a href="diodus.html">Бренд DIODUS</a></li>
+          <li><a href="luxbrand.html">Бренд LUXBRAND</a></li>
+          <li><a href="individual.html">Индивидуальное производство</a></li>
+          <li><a href="individual.html">Компоненты</a></li>
+        </ul>
+      </li>
+      <li class="nav-item has-dropdown">
+        <a href="#">Услуги <i class="fas fa-chevron-down nav-chevron"></i></a>
+        <ul class="nav-dropdown">
+          <li><a href="design.html">Проектирование</a></li>
+          <li><a href="logistics.html">Поставка и логистика</a></li>
+          <li><a href="installation.html">Монтаж</a></li>
+          <li><a href="support.html">Поддержка и обслуживание</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">О компании</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+    </ul>
+    <a href="../index.html" class="btn btn-primary display-none">Получить консультацию</a>
+    <button class="nav-burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-mobile" hidden>
+      <div class="nav-mobile__overlay" data-nav-close></div>
+      <div class="nav-mobile__panel" role="dialog" aria-modal="true">
+        <div class="nav-mobile__header">
+          <span class="nav-mobile__brand">LUXTECH</span>
+          <button class="nav-mobile__close" type="button" aria-label="Закрыть меню">×</button>
+        </div>
+        <div class="nav-mobile__content">
+          <a class="nav-mobile__link" href="../index.html">Главная</a>
+          <div class="nav-mobile__group">
+            <div class="nav-mobile__title">Решения</div>
+            <div class="nav-mobile__sublinks">
+              <a href="lightpage.html">Световые решения</a>
+              <a href="lightpage2.html">Управление зданием</a>
+              <a href="lightpage3.html">Мультимедийные решения</a>
+              <a href="lightpage4.html">Инженерные системы</a>
+              <a href="lightpage5.html">Системы безопасности</a>
+              <a href="lightpage6.html">Строительство</a>
+            </div>
+          </div>
+          <a class="nav-mobile__link" href="projects.html">Проекты</a>
+          <div class="nav-mobile__group">
+            <div class="nav-mobile__title">Продукция</div>
+            <div class="nav-mobile__sublinks">
+              <a href="diodus.html">Бренд DIODUS</a>
+              <a href="luxbrand.html">Бренд LUXBRAND</a>
+              <a href="individual.html">Индивидуальное производство</a>
+              <a href="individual.html">Компоненты</a>
+            </div>
+          </div>
+          <div class="nav-mobile__group">
+            <div class="nav-mobile__title">Услуги</div>
+            <div class="nav-mobile__sublinks">
+              <a href="design.html">Проектирование</a>
+              <a href="logistics.html">Поставка и логистика</a>
+              <a href="installation.html">Монтаж</a>
+              <a href="support.html">Поддержка и обслуживание</a>
+            </div>
+          </div>
+          <a class="nav-mobile__link" href="about.html">О компании</a>
+          <a class="nav-mobile__link" href="contacts.html">Контакты</a>
+          <div class="nav-mobile__cta">
+            <a href="contacts.html" class="btn btn-primary nav-mobile__cta-button">Получить консультацию</a>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </nav>
+
+
 
 <main>
     <section class="contact-hero">
         <div class="contact-hero__bg">
             <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80"
-                 alt="Contact Us">
+                 alt="Свяжитесь с нами">
         </div>
         <div class="container contact-hero__content">
-            <span class="contact-hero__label">Contact Us</span>
-            <h1 class="contact-hero__title">Let's Build Something<br>Extraordinary</h1>
-            <p class="contact-hero__text">Have a project in mind? Reach out to our team and let's discuss how we can
-                bring your vision to life.</p>
+            <span class="contact-hero__label">Свяжитесь с нами</span>
+            <h1 class="contact-hero__title">Давайте создадим что-то<br>выдающееся</h1>
+            <p class="contact-hero__text">Есть проект? Свяжитесь с нашей командой, и давайте обсудим, как воплотить вашу идею.</p>
         </div>
     </section>
 
@@ -64,89 +143,86 @@
         <div class="container">
             <div class="contact-page__grid">
                 <div class="contact-form-card">
-                    <h2 class="contact-form-card__title">Send Us a Message</h2>
-                    <p class="contact-form-card__subtitle">Fill out the form below and our team will get back to you
-                        shortly.</p>
+                    <h2 class="contact-form-card__title">Отправьте сообщение</h2>
+                    <p class="contact-form-card__subtitle">Заполните форму ниже, и наша команда скоро свяжется с вами.</p>
 
                     <form class="contact-form" onsubmit="event.preventDefault();">
                         <div class="contact-form__row">
                             <div class="contact-form__field">
-                                <label class="contact-form__label">Full Name *</label>
+                                <label class="contact-form__label">Полное имя *</label>
                                 <input class="contact-form__input" type="text" required>
                             </div>
                             <div class="contact-form__field">
-                                <label class="contact-form__label">Email Address *</label>
+                                <label class="contact-form__label">Эл. почта *</label>
                                 <input class="contact-form__input" type="email" required>
                             </div>
                         </div>
 
                         <div class="contact-form__row">
                             <div class="contact-form__field">
-                                <label class="contact-form__label">Phone Number</label>
+                                <label class="contact-form__label">Телефон</label>
                                 <input class="contact-form__input" type="tel">
                             </div>
                             <div class="contact-form__field">
-                                <label class="contact-form__label">Company</label>
+                                <label class="contact-form__label">Компания</label>
                                 <input class="contact-form__input" type="text">
                             </div>
                         </div>
 
                         <div class="contact-form__row">
                             <div class="contact-form__field">
-                                <label class="contact-form__label">Service Interest *</label>
+                                <label class="contact-form__label">Интересующая услуга *</label>
                                 <select class="contact-form__select" required>
-                                    <option value="">Select service</option>
-                                    <option value="lighting">Lighting Solutions</option>
-                                    <option value="bms">Building Management</option>
-                                    <option value="multimedia">Multimedia Solutions</option>
-                                    <option value="engineering">Engineering Systems</option>
-                                    <option value="security">Security Systems</option>
-                                    <option value="construction">Construction</option>
-                                    <option value="diodus">DIODUS Products</option>
-                                    <option value="other">Other</option>
+                                    <option value="">Выберите услугу</option>
+                                    <option value="lighting">Решения по освещению</option>
+                                    <option value="bms">Управление зданием</option>
+                                    <option value="multimedia">Мультимедийные решения</option>
+                                    <option value="engineering">Инженерные системы</option>
+                                    <option value="security">Системы безопасности</option>
+                                    <option value="construction">Строительство</option>
+                                    <option value="diodus">Продукция DIODUS</option>
+                                    <option value="other">Другое</option>
                                 </select>
                             </div>
                             <div class="contact-form__field">
-                                <label class="contact-form__label">Project Budget</label>
+                                <label class="contact-form__label">Бюджет проекта</label>
                                 <select class="contact-form__select">
-                                    <option value="">Select budget range</option>
+                                    <option value="">Выберите диапазон бюджета</option>
                                     <option value="50k-100k">$50,000 - $100,000</option>
                                     <option value="100k-500k">$100,000 - $500,000</option>
                                     <option value="500k-1m">$500,000 - $1,000,000</option>
                                     <option value="1m+">$1,000,000+</option>
-                                    <option value="tbd">To Be Determined</option>
+                                    <option value="tbd">Уточняется</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="contact-form__field">
-                            <label class="contact-form__label">Project Details *</label>
+                            <label class="contact-form__label">Детали проекта *</label>
                             <textarea class="contact-form__textarea" rows="5" required
                                       placeholder="Tell us about your project requirements..."></textarea>
                         </div>
 
-                        <button class="contact-form__submit" type="submit">Submit Inquiry</button>
-                        <p class="contact-form__note">We'll respond within 24 hours</p>
+                        <button class="contact-form__submit" type="submit">Отправить запрос</button>
+                        <p class="contact-form__note">Ответим в течение 24 часов</p>
                     </form>
                 </div>
 
                 <div class="contact-info">
                     <div class="contact-info__intro">
-                        <h2 class="contact-info__title">Get in Touch</h2>
-                        <p class="contact-info__text">Our global team is ready to assist you with your project
-                            needs.</p>
+                        <h2 class="contact-info__title">Связаться</h2>
+                        <p class="contact-info__text">Наша глобальная команда готова помочь с вашим проектом.</p>
                     </div>
 
                     <div class="contact-office contact-office--primary">
                         <div class="contact-office__icon"><i class="far fa-building"></i></div>
                         <div class="contact-office__details">
-                            <h3 class="contact-office__name">Dubai, UAE <span
-                                    class="contact-office__badge">HQ</span></h3>
-                            <div class="contact-office__row"><i class="fas fa-map-marker-alt"></i> 123 Business Bay
-                                Tower, Dubai, UAE</div>
+                            <h3 class="contact-office__name">Дубай, ОАЭ <span
+                                    class="contact-office__badge">Головной офис</span></h3>
+                            <div class="contact-office__row"><i class="fas fa-map-marker-alt"></i> Башня Business Bay 123, Дубай, ОАЭ</div>
                             <div class="contact-office__row"><i class="fas fa-phone-alt"></i> +971 4 123 4567</div>
                             <div class="contact-office__row"><i class="far fa-envelope"></i> dubai@luxtech.com</div>
-                            <div class="contact-office__row"><i class="far fa-clock"></i> Sun-Thu: 9AM - 6PM</div>
+                            <div class="contact-office__row"><i class="far fa-clock"></i> Вс–Чт: 9:00–18:00</div>
                         </div>
                     </div>
 
@@ -154,16 +230,16 @@
                         <div class="contact-office__icon contact-office__icon--light"><i class="far fa-building"></i>
                         </div>
                         <div class="contact-office__details">
-                            <h3 class="contact-office__name contact-office__name--dark">Singapore, Singapore</h3>
+                            <h3 class="contact-office__name contact-office__name--dark">Сингапур, Сингапур</h3>
                             <div class="contact-office__row contact-office__row--dark"><i
-                                    class="fas fa-map-marker-alt"></i> 456 Marina Bay Financial Centre, Singapore
+                                    class="fas fa-map-marker-alt"></i> 456 Marina Bay Financial Centre, Сингапур
                             </div>
                             <div class="contact-office__row contact-office__row--dark"><i
                                     class="fas fa-phone-alt"></i> +65 6123 4567</div>
                             <div class="contact-office__row contact-office__row--dark"><i
                                     class="far fa-envelope"></i> singapore@luxtech.com</div>
                             <div class="contact-office__row contact-office__row--dark"><i
-                                    class="far fa-clock"></i> Mon-Fri: 9AM - 6PM</div>
+                                    class="far fa-clock"></i> Пн–Пт: 9:00–18:00</div>
                         </div>
                     </div>
 
@@ -171,21 +247,21 @@
                         <div class="contact-office__icon contact-office__icon--light"><i class="far fa-building"></i>
                         </div>
                         <div class="contact-office__details">
-                            <h3 class="contact-office__name contact-office__name--dark">London, United Kingdom</h3>
+                            <h3 class="contact-office__name contact-office__name--dark">Лондон, Великобритания</h3>
                             <div class="contact-office__row contact-office__row--dark"><i
-                                    class="fas fa-map-marker-alt"></i> 789 Canary Wharf Tower, London, UK</div>
+                                    class="fas fa-map-marker-alt"></i> Башня Canary Wharf 789, Лондон, Великобритания</div>
                             <div class="contact-office__row contact-office__row--dark"><i
                                     class="fas fa-phone-alt"></i> +44 20 1234 5678</div>
                             <div class="contact-office__row contact-office__row--dark"><i
                                     class="far fa-envelope"></i> london@luxtech.com</div>
                             <div class="contact-office__row contact-office__row--dark"><i
-                                    class="far fa-clock"></i> Mon-Fri: 9AM - 5PM</div>
+                                    class="far fa-clock"></i> Пн–Пт: 9:00–17:00</div>
                         </div>
                     </div>
 
                     <div class="contact-urgent">
-                        <h3 class="contact-urgent__title">Need Immediate Assistance?</h3>
-                        <p class="contact-urgent__text">Call our 24/7 support hotline for urgent inquiries.</p>
+                        <h3 class="contact-urgent__title">Нужна срочная помощь?</h3>
+                        <p class="contact-urgent__text">Позвоните на нашу круглосуточную линию поддержки для срочных запросов.</p>
                         <a class="contact-urgent__phone" href="tel:+97141234567"><i
                                 class="fas fa-phone-alt"></i> +971 4 123 4567</a>
                     </div>
@@ -208,7 +284,7 @@
                     </div>
                     <div class="leadership__content">
                         <h3 class="leadership__name">Александр Петров</h3>
-                        <p class="leadership__role">Сооснователь и CEO</p>
+                        <p class="leadership__role">Сооснователь и генеральный директор</p>
                         <p class="leadership__bio">Более 20 лет опыта в инженерной индустрии. Выпускник
                             Массачусетского технологического института. Руководил крупными инфраструктурными
                             проектами на Ближнем Востоке и в Европе.</p>
@@ -221,7 +297,7 @@
                     </div>
                     <div class="leadership__content">
                         <h3 class="leadership__name">Михаил Соколов</h3>
-                        <p class="leadership__role">Сооснователь и CTO</p>
+                        <p class="leadership__role">Сооснователь и технический директор</p>
                         <p class="leadership__bio">Эксперт в области интеллектуальных систем управления зданиями.
                             Доктор технических наук. Автор более 50 патентов в области автоматизации и IoT-решений
                             для коммерческой недвижимости.</p>
@@ -235,8 +311,8 @@
         <div class="contact-map__overlay">
             <div class="contact-map__content">
                 <i class="fas fa-map-marker-alt contact-map__icon"></i>
-                <p class="contact-map__title">Interactive Map</p>
-                <p class="contact-map__subtitle">Dubai Business Bay</p>
+                <p class="contact-map__title">Интерактивная карта</p>
+                <p class="contact-map__subtitle">Business Bay, Дубай</p>
             </div>
         </div>
         <img class="contact-map__image"
@@ -279,8 +355,8 @@
                 <h4>Компания</h4>
                 <ul>
                     <li><a href="#">О нас</a></li>
-                    <li><a href="#">Проекты</a></li>
-                    <li><a href="#">Бренд DIODUS</a></li>
+                    <li><a href="projects.html">Проекты</a></li>
+                    <li><a href="diodus.html">Бренд DIODUS</a></li>
                     <li><a href="#">Контакты</a></li>
                 </ul>
             </div>
@@ -289,7 +365,7 @@
                 <h4>Контакты</h4>
                 <div class="contact-item"><i class="fas fa-phone-alt"></i> +1 (234) 567-890</div>
                 <div class="contact-item"><i class="fas fa-envelope"></i> info@luxtech.com</div>
-                <div class="contact-item"><i class="fas fa-map-marker-alt"></i> 123 Engineering Blvd<br>Нью-Йорк, NY 10001</div>
+                <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Инженерный бульвар, 123<br>Нью-Йорк, 10001</div>
             </div>
 
         </div>
@@ -304,9 +380,7 @@
     </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="../script.js"></script>
 </body>
 </html>
-
-
 

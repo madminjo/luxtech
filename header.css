@@ -87,6 +87,10 @@ nav .container {
     padding: 0;
 }
 
+.nav-links li {
+    position: relative;
+}
+
 .nav-links a { 
     text-decoration: none;
     color: #111827;
@@ -95,6 +99,63 @@ nav .container {
 
 .nav-links a:hover { 
     color: var(--primary-blue); 
+}
+
+.nav-dropdown {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    min-width: 230px;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.18);
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    z-index: 1100;
+}
+
+.nav-dropdown li {
+    list-style: none;
+}
+
+.nav-dropdown a {
+    display: block;
+    padding: 8px 18px;
+    font-size: 13px;
+    color: #0f172a;
+    text-decoration: none;
+}
+
+.nav-dropdown a:hover {
+    background: #f1f5f9;
+    color: var(--primary-blue);
+}
+
+.has-dropdown.is-open .nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.nav-chevron {
+    font-size: 10px;
+    margin-left: 6px;
+    opacity: 0;
+    transform: translateY(-1px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover .nav-chevron,
+.nav-menu a:hover .nav-chevron,
+.has-dropdown.is-open .nav-chevron {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .btn {
@@ -119,7 +180,148 @@ nav .container {
     box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
+.nav-burger {
+    display: none;
+    border: none;
+    background: transparent;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+}
+
+.nav-burger span {
+    display: block;
+    height: 2px;
+    width: 22px;
+    background: #111827;
+    border-radius: 2px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-mobile[hidden] {
+    display: none;
+}
+
+.nav-mobile {
+    position: fixed;
+    inset: 0;
+    z-index: 1200;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-mobile__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 22, 40, 0.5);
+}
+
+.nav-mobile__panel {
+    position: relative;
+    width: min(420px, 90%);
+    height: 100%;
+    background: #fff;
+    padding: 20px 24px 28px;
+    box-shadow: -12px 0 30px rgba(15, 23, 42, 0.16);
+    overflow-y: auto;
+}
+
+.nav-mobile__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 16px;
+}
+
+.nav-mobile__brand {
+    font-weight: 700;
+    color: #0A1628;
+    letter-spacing: 0.2px;
+}
+
+.nav-mobile__close {
+    border: none;
+    background: transparent;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    color: #111827;
+}
+
+.nav-mobile__content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.nav-mobile__link {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0A1628;
+    text-decoration: none;
+    padding: 8px 0;
+}
+
+.nav-mobile__group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nav-mobile__title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0A1628;
+}
+
+.nav-mobile__sublinks {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-left: 12px;
+}
+
+.nav-mobile__sublinks a {
+    font-size: 13px;
+    color: #64748b;
+    text-decoration: none;
+    padding: 4px 0;
+}
+
+.nav-mobile__sublinks a:hover {
+    color: var(--primary-blue);
+}
+
+.nav-mobile__cta {
+    padding-top: 12px;
+}
+
+.nav-mobile__cta-button {
+    width: 100%;
+    text-align: center;
+}
+
 /* Responsive */
+@media (max-width: 1173px) {
+    .nav-links {
+        display: none;
+    }
+
+    nav .btn.btn-primary {
+        display: none;
+    }
+
+    .nav-burger {
+        display: inline-flex;
+    }
+}
+
 @media (max-width: 1024px) {
     .top-bar {
         font-size: 12px;
@@ -130,7 +332,7 @@ nav .container {
     }
     
     nav .container {
-        padding: 12px 0;
+        padding: 12px 5px;
     }
 }
 

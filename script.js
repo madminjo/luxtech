@@ -84,6 +84,141 @@ document.addEventListener('DOMContentLoaded', () => {
             input.parentElement.querySelector('label').style.color = '#111827';
         });
     });
+
+    const navToggles = document.querySelectorAll('.has-dropdown > a');
+    navToggles.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const parent = toggle.parentElement;
+            const isOpen = parent.classList.contains('is-open');
+            const scope = parent.closest('nav') || document;
+
+            scope.querySelectorAll('.has-dropdown.is-open').forEach(item => {
+                if (item !== parent) {
+                    item.classList.remove('is-open');
+                }
+            });
+
+            parent.classList.toggle('is-open', !isOpen);
+        });
+    });
+
+    document.querySelectorAll('.nav-dropdown a').forEach(link => {
+        link.addEventListener('click', () => {
+            const parent = link.closest('.has-dropdown');
+            if (parent) {
+                parent.classList.remove('is-open');
+            }
+        });
+    });
+
+    const navBurgers = document.querySelectorAll('.nav-burger');
+    navBurgers.forEach(burger => {
+        const container = burger.closest('nav, header');
+        if (!container) {
+            return;
+        }
+        const mobile = container.querySelector('.nav-mobile');
+        const overlay = container.querySelector('.nav-mobile__overlay');
+        const closeButton = container.querySelector('.nav-mobile__close');
+
+        if (!mobile) {
+            return;
+        }
+
+        const closeMenu = () => {
+            burger.setAttribute('aria-expanded', 'false');
+            mobile.hidden = true;
+        };
+
+        burger.addEventListener('click', () => {
+            const isOpen = burger.getAttribute('aria-expanded') === 'true';
+            burger.setAttribute('aria-expanded', String(!isOpen));
+            mobile.hidden = isOpen;
+        });
+
+        if (overlay) {
+            overlay.addEventListener('click', closeMenu);
+        }
+
+        if (closeButton) {
+            closeButton.addEventListener('click', closeMenu);
+        }
+
+        mobile.addEventListener('click', (event) => {
+            const target = event.target;
+            if (target instanceof Element && target.tagName === 'A') {
+                closeMenu();
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 1173) {
+                closeMenu();
+            }
+        });
+    });
+
+    const projectsPage = document.querySelector('.projects-page');
+    if (projectsPage) {
+        const searchInput = document.getElementById('projects-search');
+        const filterButtons = Array.from(document.querySelectorAll('.projects-chip[data-filter]'));
+        const cards = Array.from(document.querySelectorAll('.projects-card'));
+        let activeFilter = 'all';
+
+        const normalize = (value) => (value || '').toLowerCase().trim();
+        const matchesSearch = (card, query) => {
+            if (!query) {
+                return true;
+            }
+            const haystack = [
+                card.dataset.title,
+                card.dataset.location,
+                card.dataset.tags,
+                card.dataset.year,
+            ]
+                .map(normalize)
+                .join(' ');
+            return haystack.includes(query);
+        };
+
+        const matchesFilter = (card, filter) => {
+            if (filter === 'all') {
+                return true;
+            }
+            return normalize(card.dataset.category) === filter;
+        };
+
+        const applyFilters = () => {
+            const query = normalize(searchInput ? searchInput.value : '');
+            cards.forEach(card => {
+                const visible = matchesFilter(card, activeFilter) && matchesSearch(card, query);
+                card.classList.toggle('projects-card--hidden', !visible);
+            });
+        };
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                activeFilter = normalize(button.dataset.filter);
+                filterButtons.forEach(item => item.classList.remove('projects-chip--active'));
+                button.classList.add('projects-chip--active');
+                applyFilters();
+            });
+        });
+
+        if (searchInput) {
+            searchInput.addEventListener('input', applyFilters);
+        }
+    }
+});
+
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.has-dropdown')) {
+        document.querySelectorAll('.has-dropdown.is-open').forEach(item => {
+            item.classList.remove('is-open');
+        });
+    }
 });
 
 
