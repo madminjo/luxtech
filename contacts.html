@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXTECH - Engineering Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile-fixes.css">
+
+
+</head>
+<body>
+
+<div class="top-bar">
+    <div class="container">
+        <div class="top-info">
+            <span><i class="fas fa-phone-alt"></i> +1 (234) 567-890</span>
+            <span><i class="fas fa-envelope"></i> info@luxtech.com</span>
+        </div>
+        <div class="top-loc">
+            <i class="fas fa-map-marker-alt"></i> Нью-Йорк • Дубай • Сингапур
+        </div>
+    </div>
+</div>
+
+<nav>
+    <div class="container">
+        <a href="contacts.html" class="logo">
+            <div class="logo-icon"><i class="far fa-square"></i></div>
+            LUXTECH
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="#">Решения <i class="fas fa-chevron-down nav-chevron"></i></a></li>
+            <li><a href="#">Проекты</a></li>
+            <li><a href="diodus.html">Продукция <i class="fas fa-chevron-down nav-chevron"></i></a></li>
+            <li><a href="supply.html">Услуги <i class="fas fa-chevron-down nav-chevron"></i></a></li>
+            <li><a href="about.html">О компании</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+        <a href="index.html" class="btn btn-primary">Получить консультацию</a>
+    </div>
+</nav>
+
+<main>
+    <section class="contact-hero">
+        <div class="contact-hero__bg">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80"
+                 alt="Contact Us">
+        </div>
+        <div class="container contact-hero__content">
+            <span class="contact-hero__label">Contact Us</span>
+            <h1 class="contact-hero__title">Let's Build Something<br>Extraordinary</h1>
+            <p class="contact-hero__text">Have a project in mind? Reach out to our team and let's discuss how we can
+                bring your vision to life.</p>
+        </div>
+    </section>
+
+    <section class="contact-page">
+        <div class="container">
+            <div class="contact-page__grid">
+                <div class="contact-form-card">
+                    <h2 class="contact-form-card__title">Send Us a Message</h2>
+                    <p class="contact-form-card__subtitle">Fill out the form below and our team will get back to you
+                        shortly.</p>
+
+                    <form class="contact-form" onsubmit="event.preventDefault();">
+                        <div class="contact-form__row">
+                            <div class="contact-form__field">
+                                <label class="contact-form__label">Full Name *</label>
+                                <input class="contact-form__input" type="text" required>
+                            </div>
+                            <div class="contact-form__field">
+                                <label class="contact-form__label">Email Address *</label>
+                                <input class="contact-form__input" type="email" required>
+                            </div>
+                        </div>
+
+                        <div class="contact-form__row">
+                            <div class="contact-form__field">
+                                <label class="contact-form__label">Phone Number</label>
+                                <input class="contact-form__input" type="tel">
+                            </div>
+                            <div class="contact-form__field">
+                                <label class="contact-form__label">Company</label>
+                                <input class="contact-form__input" type="text">
+                            </div>
+                        </div>
+
+                        <div class="contact-form__row">
+                            <div class="contact-form__field">
+                                <label class="contact-form__label">Service Interest *</label>
+                                <select class="contact-form__select" required>
+                                    <option value="">Select service</option>
+                                    <option value="lighting">Lighting Solutions</option>
+                                    <option value="bms">Building Management</option>
+                                    <option value="multimedia">Multimedia Solutions</option>
+                                    <option value="engineering">Engineering Systems</option>
+                                    <option value="security">Security Systems</option>
+                                    <option value="construction">Construction</option>
+                                    <option value="diodus">DIODUS Products</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="contact-form__field">
+                                <label class="contact-form__label">Project Budget</label>
+                                <select class="contact-form__select">
+                                    <option value="">Select budget range</option>
+                                    <option value="50k-100k">$50,000 - $100,000</option>
+                                    <option value="100k-500k">$100,000 - $500,000</option>
+                                    <option value="500k-1m">$500,000 - $1,000,000</option>
+                                    <option value="1m+">$1,000,000+</option>
+                                    <option value="tbd">To Be Determined</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="contact-form__field">
+                            <label class="contact-form__label">Project Details *</label>
+                            <textarea class="contact-form__textarea" rows="5" required
+                                      placeholder="Tell us about your project requirements..."></textarea>
+                        </div>
+
+                        <button class="contact-form__submit" type="submit">Submit Inquiry</button>
+                        <p class="contact-form__note">We'll respond within 24 hours</p>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-info__intro">
+                        <h2 class="contact-info__title">Get in Touch</h2>
+                        <p class="contact-info__text">Our global team is ready to assist you with your project
+                            needs.</p>
+                    </div>
+
+                    <div class="contact-office contact-office--primary">
+                        <div class="contact-office__icon"><i class="far fa-building"></i></div>
+                        <div class="contact-office__details">
+                            <h3 class="contact-office__name">Dubai, UAE <span
+                                    class="contact-office__badge">HQ</span></h3>
+                            <div class="contact-office__row"><i class="fas fa-map-marker-alt"></i> 123 Business Bay
+                                Tower, Dubai, UAE</div>
+                            <div class="contact-office__row"><i class="fas fa-phone-alt"></i> +971 4 123 4567</div>
+                            <div class="contact-office__row"><i class="far fa-envelope"></i> dubai@luxtech.com</div>
+                            <div class="contact-office__row"><i class="far fa-clock"></i> Sun-Thu: 9AM - 6PM</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-office">
+                        <div class="contact-office__icon contact-office__icon--light"><i class="far fa-building"></i>
+                        </div>
+                        <div class="contact-office__details">
+                            <h3 class="contact-office__name contact-office__name--dark">Singapore, Singapore</h3>
+                            <div class="contact-office__row contact-office__row--dark"><i
+                                    class="fas fa-map-marker-alt"></i> 456 Marina Bay Financial Centre, Singapore
+                            </div>
+                            <div class="contact-office__row contact-office__row--dark"><i
+                                    class="fas fa-phone-alt"></i> +65 6123 4567</div>
+                            <div class="contact-office__row contact-office__row--dark"><i
+                                    class="far fa-envelope"></i> singapore@luxtech.com</div>
+                            <div class="contact-office__row contact-office__row--dark"><i
+                                    class="far fa-clock"></i> Mon-Fri: 9AM - 6PM</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-office">
+                        <div class="contact-office__icon contact-office__icon--light"><i class="far fa-building"></i>
+                        </div>
+                        <div class="contact-office__details">
+                            <h3 class="contact-office__name contact-office__name--dark">London, United Kingdom</h3>
+                            <div class="contact-office__row contact-office__row--dark"><i
+                                    class="fas fa-map-marker-alt"></i> 789 Canary Wharf Tower, London, UK</div>
+                            <div class="contact-office__row contact-office__row--dark"><i
+                                    class="fas fa-phone-alt"></i> +44 20 1234 5678</div>
+                            <div class="contact-office__row contact-office__row--dark"><i
+                                    class="far fa-envelope"></i> london@luxtech.com</div>
+                            <div class="contact-office__row contact-office__row--dark"><i
+                                    class="far fa-clock"></i> Mon-Fri: 9AM - 5PM</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-urgent">
+                        <h3 class="contact-urgent__title">Need Immediate Assistance?</h3>
+                        <p class="contact-urgent__text">Call our 24/7 support hotline for urgent inquiries.</p>
+                        <a class="contact-urgent__phone" href="tel:+97141234567"><i
+                                class="fas fa-phone-alt"></i> +971 4 123 4567</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="leadership">
+        <div class="container">
+            <div class="leadership__header">
+                <span class="leadership__label">РУКОВОДСТВО</span>
+                <h2 class="leadership__title">Наши основатели</h2>
+            </div>
+            <div class="leadership__grid">
+                <article class="leadership__card">
+                    <div class="leadership__photo">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80"
+                             alt="Александр Петров">
+                    </div>
+                    <div class="leadership__content">
+                        <h3 class="leadership__name">Александр Петров</h3>
+                        <p class="leadership__role">Сооснователь и CEO</p>
+                        <p class="leadership__bio">Более 20 лет опыта в инженерной индустрии. Выпускник
+                            Массачусетского технологического института. Руководил крупными инфраструктурными
+                            проектами на Ближнем Востоке и в Европе.</p>
+                    </div>
+                </article>
+                <article class="leadership__card">
+                    <div class="leadership__photo">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80"
+                             alt="Михаил Соколов">
+                    </div>
+                    <div class="leadership__content">
+                        <h3 class="leadership__name">Михаил Соколов</h3>
+                        <p class="leadership__role">Сооснователь и CTO</p>
+                        <p class="leadership__bio">Эксперт в области интеллектуальных систем управления зданиями.
+                            Доктор технических наук. Автор более 50 патентов в области автоматизации и IoT-решений
+                            для коммерческой недвижимости.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-map">
+        <div class="contact-map__overlay">
+            <div class="contact-map__content">
+                <i class="fas fa-map-marker-alt contact-map__icon"></i>
+                <p class="contact-map__title">Interactive Map</p>
+                <p class="contact-map__subtitle">Dubai Business Bay</p>
+            </div>
+        </div>
+        <img class="contact-map__image"
+             src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&q=80" alt="Dubai">
+    </section>
+</main>
+
+
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+
+            <div class="footer-col">
+                <a href="contacts.html" class="logo footer-logo">
+                    <div class="logo-icon"><i class="far fa-square"></i></div>
+                    LUXTECH
+                </a>
+                <p class="footer-desc">
+                    Комплексные инженерные решения для коммерческих и общественных объектов. От концепции до реализации.
+                </p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Решения</h4>
+                <ul>
+                    <li><a href="#">Освещение</a></li>
+                    <li><a href="#">Управление зданием</a></li>
+                    <li><a href="#">Мультимедиа</a></li>
+                    <li><a href="#">Системы безопасности</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Компания</h4>
+                <ul>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Проекты</a></li>
+                    <li><a href="#">Бренд DIODUS</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Контакты</h4>
+                <div class="contact-item"><i class="fas fa-phone-alt"></i> +1 (234) 567-890</div>
+                <div class="contact-item"><i class="fas fa-envelope"></i> info@luxtech.com</div>
+                <div class="contact-item"><i class="fas fa-map-marker-alt"></i> 123 Engineering Blvd<br>Нью-Йорк, NY 10001</div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div>&copy; 2026 LUXTECH. Все права защищены.</div>
+            <div class="footer-links">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Условия использования</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+

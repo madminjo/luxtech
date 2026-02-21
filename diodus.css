@@ -1,0 +1,1216 @@
+/* --- RESET & BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #111827;
+    background-color: #f9fafb;
+}
+
+
+/* --- HERO SECTION --- */
+.hero {
+    background: linear-gradient(90deg, #0a0f1a 0%, #162033 100%);
+    color: #fff;
+    padding: 100px 5%;
+    display: flex;
+    align-items: center;
+    min-height: 600px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.brand-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.badge-icon {
+    background: #f97316;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.hero h1 span {
+    color: #3b82f6;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #9ca3af;
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-orange {
+    background: #f97316;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-white {
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-orange:hover {
+    background: #ea580c;
+    box-shadow: 0 10px 15px -3px rgba(249, 115, 22, 0.4);
+}
+
+/* --- STATS BAR --- */
+.stats-bar {
+    background: #fff;
+    padding: 40px 5%;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.stat-item p {
+    color: #9ca3af;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* --- WHY DIODUS / EXCELLENCE GRID --- */
+.section {
+    padding: 80px 5%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header span {
+    color: #f97316;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.section-header h2 {
+    font-size: 36px;
+    margin-top: 10px;
+}
+
+.excel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.excel-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.excel-card:hover {
+    border-color: #f97316;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.icon-box {
+    background: #fff7ed;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #f97316;
+    margin-bottom: 20px;
+}
+
+.excel-card h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.excel-card p {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* --- PRODUCT CARDS --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(380px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    justify-items: center;
+}
+
+.p-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    width: 100%;
+}
+
+.p-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.p-img {
+    height: 280px;
+    background: #e5e7eb;
+    position: relative;
+    overflow: hidden;
+}
+
+.p-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.p-card:hover .p-img img {
+    transform: scale(1.1);
+}
+
+.p-info {
+    padding: 30px;
+}
+
+.p-info h3 {
+    margin-bottom: 10px;
+}
+
+.p-info p {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.p-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background: #fff7ed;
+    color: #f97316;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .excellence-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .m-grid, .p-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero {
+        padding: 80px 5%;
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .stats-bar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 5%;
+    }
+
+    .stat-item h3 {
+        font-size: 28px;
+    }
+
+    .stat-item p {
+        font-size: 12px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .p-card {
+        width: 100%;
+    }
+
+    .p-img {
+        height: 240px;
+    }
+
+    .p-info {
+        padding: 24px;
+    }
+
+    .p-info h3 {
+        font-size: 18px;
+    }
+
+    .manufacturing-section {
+        padding: 60px 5%;
+    }
+
+    .main-heading {
+        font-size: 32px;
+    }
+
+    .excellence-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .excellence-card {
+        padding: 30px;
+    }
+
+    .excellence-card h3 {
+        font-size: 16px;
+    }
+
+    .excellence-card p {
+        font-size: 13px;
+    }
+
+    .m-grid, .p-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .section-tag {
+        font-size: 11px;
+    }
+
+    .certs {
+        padding: 60px 5%;
+    }
+
+    .cert-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cert-item {
+        min-width: auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    .cta {
+        padding: 60px 5%;
+    }
+
+    .cta h2 {
+        font-size: 32px;
+    }
+
+    .cta p {
+        font-size: 16px;
+    }
+
+    .sub-heading {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 13px;
+    }
+
+    .container {
+        padding: 0 12px;
+    }
+
+    .hero {
+        padding: 60px 5%;
+        min-height: auto;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .hero p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .brand-badge {
+        margin-bottom: 20px;
+    }
+
+    .badge-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+
+    .brand-badge span {
+        font-size: 20px;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-orange, .btn-white {
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    .stats-bar {
+        padding: 20px 5%;
+        gap: 15px;
+    }
+
+    .stat-item h3 {
+        font-size: 24px;
+    }
+
+    .stat-item p {
+        font-size: 11px;
+    }
+
+    .manufacturing-section {
+        padding: 40px 5%;
+    }
+
+    .main-heading {
+        font-size: 26px;
+    }
+
+    .sub-heading {
+        font-size: 11px;
+        margin-bottom: 10px;
+    }
+
+    .excellence-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .excellence-card {
+        padding: 24px;
+    }
+
+    .excellence-card h3 {
+        font-size: 15px;
+    }
+
+    .excellence-card p {
+        font-size: 12px;
+    }
+
+    .icon-wrapper {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 16px;
+    }
+
+    .section {
+        padding: 50px 5%;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .section-header h2 {
+        font-size: 24px;
+    }
+
+    .section-header span {
+        font-size: 11px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 0;
+    }
+
+    .p-card {
+        width: 100%;
+    }
+
+    .p-img {
+        height: 200px;
+    }
+
+    .p-info {
+        padding: 20px;
+    }
+
+    .p-info h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .p-info p {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .tag {
+        font-size: 10px;
+        padding: 3px 10px;
+    }
+
+    .m-grid, .p-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .m-card, .p-card {
+        padding: 20px;
+    }
+
+    .m-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+
+    .m-card h3, .p-card h3 {
+        font-size: 15px;
+    }
+
+    .m-card p, .p-card p {
+        font-size: 12px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .section-tag {
+        font-size: 10px;
+    }
+
+    .certs {
+        padding: 40px 5%;
+    }
+
+    .certs .section-title {
+        color: white;
+        font-size: 24px;
+    }
+
+    .cert-list {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .cert-item {
+        padding: 12px 20px;
+        font-size: 12px;
+        border-radius: 8px;
+    }
+
+    .cta {
+        padding: 40px 5%;
+    }
+
+    .cta h2 {
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+
+    .cta p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .cta-btn {
+        padding: 12px 24px;
+        font-size: 12px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    body {
+        font-size: 12px;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .hero {
+        padding: 40px 4%;
+        min-height: auto;
+    }
+
+    .hero h1 {
+        font-size: 22px;
+        margin-bottom: 12px;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+
+    .brand-badge {
+        margin-bottom: 15px;
+        gap: 8px;
+    }
+
+    .badge-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+
+    .brand-badge span {
+        font-size: 18px;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .btn-orange, .btn-white {
+        width: 100%;
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+
+    .stats-bar {
+        padding: 15px 4%;
+        gap: 12px;
+        flex-direction: column;
+    }
+
+    .stat-item h3 {
+        font-size: 22px;
+    }
+
+    .stat-item p {
+        font-size: 10px;
+    }
+
+    .manufacturing-section {
+        padding: 30px 4%;
+    }
+
+    .main-heading {
+        font-size: 22px;
+    }
+
+    .sub-heading {
+        font-size: 10px;
+        margin-bottom: 8px;
+    }
+
+    .excellence-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .excellence-card {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .excellence-card h3 {
+        font-size: 13px;
+    }
+
+    .excellence-card p {
+        font-size: 11px;
+    }
+
+    .icon-wrapper {
+        width: 36px;
+        height: 36px;
+        margin-bottom: 12px;
+    }
+
+    .section {
+        padding: 35px 4%;
+    }
+
+    .section-header {
+        margin-bottom: 30px;
+    }
+
+    .section-header h2 {
+        font-size: 20px;
+    }
+
+    .section-header span {
+        font-size: 10px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 0;
+    }
+
+    .p-card {
+        width: 100%;
+    }
+
+    .p-img {
+        height: 180px;
+    }
+
+    .p-info {
+        padding: 16px;
+    }
+
+    .p-info h3 {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .p-info p {
+        font-size: 11px;
+        margin-bottom: 10px;
+    }
+
+    .p-tags {
+        gap: 6px;
+    }
+
+    .tag {
+        font-size: 9px;
+        padding: 2px 8px;
+    }
+
+    .m-grid, .p-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .m-card, .p-card {
+        padding: 16px;
+        border-radius: 16px;
+    }
+
+    .m-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+
+    .m-card h3, .p-card h3 {
+        font-size: 14px;
+    }
+
+    .m-card p, .p-card p {
+        font-size: 11px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .section-tag {
+        font-size: 9px;
+    }
+
+    .certs {
+        padding: 30px 4%;
+    }
+
+    .certs .section-title {
+        color: white;
+        font-size: 20px;
+    }
+
+    .certs .section-tag {
+        opacity: 1;
+    }
+
+    .cert-list {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .cert-item {
+        padding: 10px 16px;
+        font-size: 11px;
+        border-radius: 6px;
+    }
+
+    .cta {
+        padding: 30px 4%;
+    }
+
+    .cta h2 {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+
+    .cta p {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+
+    .cta-btn {
+        padding: 10px 20px;
+        font-size: 11px;
+        width: 100%;
+    }
+}
+
+/* --- BASE STYLES --- */
+.manufacturing-section {
+    padding: 100px 20px;
+    background-color: #ffffff;
+    font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- HEADER STYLES --- */
+.manufacturing-section .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.sub-heading {
+    color: #f97316;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.main-heading {
+    color: #0f172a;
+    font-size: 42px;
+    font-weight: 800;
+    margin: 0;
+}
+
+/* --- GRID STYLES --- */
+.excellence-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* --- CARD STYLES --- */
+.excellence-card {
+    background-color: #f8fafc;
+    padding: 40px;
+    border-radius: 24px;
+    transition: all 0.3s ease;
+}
+
+.excellence-card:hover {
+    background-color: #ffffff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    transform: translateY(-5px);
+}
+
+.icon-wrapper {
+    width: 48px;
+    height: 48px;
+    background-color: #fff7ed;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.icon-wrapper img {
+    width: 24px;
+    height: 24px;
+    filter: invert(56%) sepia(90%) saturate(1478%) hue-rotate(345deg) brightness(101%) contrast(96%);
+}
+
+.excellence-card h3 {
+    color: #0f172a;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+}
+
+.excellence-card p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 992px) {
+    .excellence-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .excellence-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-heading {
+        font-size: 32px;
+    }
+}
+
+/* --- BASE STYLES --- */
+.section-tag {
+    color: #f97316;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #0f172a;
+}
+
+/* --- MANUFACTURING EXCELLENCE BLOCK --- */
+.manufacturing {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.m-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.m-card {
+    background: #f8fafc;
+    padding: 40px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.m-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.m-icon {
+    width: 40px;
+    height: 40px;
+    background: #fff7ed;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    color: #f97316;
+    font-size: 20px;
+}
+
+.m-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.m-card p {
+    font-size: 14px;
+    color: #64748b;
+}
+
+/* --- PRODUCT LINES BLOCK --- */
+.products {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.p-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.p-card {
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fff;
+    transition: 0.3s;
+}
+
+.p-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.p-img {
+    height: 240px;
+    background: #e2e8f0;
+    overflow: hidden;
+}
+
+.p-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.p-content {
+    padding: 30px;
+}
+
+.p-content h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.p-content p {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 20px;
+    min-height: 42px;
+}
+
+.p-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.tag {
+    background: #fff7ed;
+    color: #f97316;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.warranty-tag {
+    color: #f97316;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* --- CERTIFICATIONS BLOCK --- */
+.certs {
+    padding: 100px 0;
+    background: #0a1120;
+    color: #fff;
+    text-align: center;
+}
+
+.certs .section-tag {
+    color: #f97316;
+    opacity: 0.9;
+}
+
+.certs .section-title {
+    color: #fff;
+}
+
+.cert-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.cert-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-weight: 700;
+    color: #94a3b8;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-width: 100px;
+}
+
+/* --- CTA ORANGE BLOCK --- */
+.cta {
+    padding: 80px 0;
+    background: linear-gradient(90deg, #f97316 0%, #fb923c 100%);
+    text-align: center;
+    color: #fff;
+}
+
+.cta h2 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-btn {
+    background: #fff;
+    color: #f97316;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- ADDITIONAL RESPONSIVE --- */
+@media (max-width: 992px) {
+    .m-grid, .p-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .m-grid, .p-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+}
