@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DIODUS | LUXTECH</title>
+  <title>Блог | LUXTECH</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="../header.css">
@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../mobile-fixes.css">
 </head>
-<body class="diodus-page">
+<body class="blog-page">
   <div class="top-bar">
     <div class="container">
       <div class="top-info">
@@ -136,216 +136,103 @@
 </nav>
 
 
-  <main class="diodus">
-    <section class="diodus-hero">
-      <div class="diodus-hero__media">
-        <img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=1920&q=80" alt="DIODUS">
-        <div class="diodus-hero__overlay"></div>
+
+  <main class="blog">
+    <section class="blog-hero">
+      <div class="blog-hero__media">
+        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1920&q=80" alt="Блог">
+        <div class="blog-hero__overlay"></div>
       </div>
-      <div class="diodus-hero__glow"></div>
-      <div class="container diodus-hero__content">
-        <div class="diodus-hero__brand">
-          <div class="diodus-hero__logo">D</div>
-          <span class="diodus-hero__name">DIODUS</span>
-        </div>
-        <h1 class="diodus-hero__title">Premium Lighting<br><span>Engineered Excellence</span></h1>
-        <p class="diodus-hero__text">In-house designed and manufactured lighting solutions that combine superior performance with exceptional aesthetics.</p>
-        <div class="diodus-hero__actions">
-          <a href="contacts.html" class="diodus-hero__primary">Request Catalog <i class="fas fa-arrow-right"></i></a>
-          <a href="projects.html" class="diodus-hero__secondary">View Projects</a>
-        </div>
+      <div class="container blog-hero__content">
+        <span class="blog-hero__label">Блог</span>
+        <h1 class="blog-hero__title">Инсайты и экспертиза</h1>
+        <p class="blog-hero__text">Последние новости, технологические тренды и истории успеха наших проектов</p>
       </div>
     </section>
 
-    <section class="diodus-stats">
+    <section class="blog-filters">
       <div class="container">
-        <div class="diodus-stats__grid">
-          <div class="diodus-stats__item">
-            <div class="diodus-stats__value">50K+</div>
-            <div class="diodus-stats__label">Products Annually</div>
-          </div>
-          <div class="diodus-stats__item">
-            <div class="diodus-stats__value">200+</div>
-            <div class="diodus-stats__label">Product SKUs</div>
-          </div>
-          <div class="diodus-stats__item">
-            <div class="diodus-stats__value">15+</div>
-            <div class="diodus-stats__label">Years Manufacturing</div>
-          </div>
-          <div class="diodus-stats__item">
-            <div class="diodus-stats__value">40+</div>
-            <div class="diodus-stats__label">Countries Supplied</div>
-          </div>
+        <div class="blog-filters__row" data-blog-filters>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-filter"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+          <button class="blog-filters__button blog-filters__button--active" data-filter="all">Все</button>
+          <button class="blog-filters__button" data-filter="технологии">Технологии</button>
+          <button class="blog-filters__button" data-filter="проекты">Проекты</button>
+          <button class="blog-filters__button" data-filter="новости">Новости</button>
+          <button class="blog-filters__button" data-filter="инновации">Инновации</button>
+          <button class="blog-filters__button" data-filter="кейсы">Кейсы</button>
         </div>
       </div>
     </section>
 
-    <section class="diodus-why">
+    <section class="blog-feature">
       <div class="container">
-        <div class="diodus-why__header">
-          <span class="diodus-why__eyebrow">Why DIODUS</span>
-          <h2 class="diodus-why__title">Manufacturing Excellence</h2>
-        </div>
-        <div class="diodus-why__grid">
-          <div class="diodus-why__card">
-            <div class="diodus-why__icon"><i class="fas fa-industry"></i></div>
-            <h3>In-House Manufacturing</h3>
-            <p>50,000+ sq ft production facility with full quality control</p>
+        <a class="blog-feature__card" href="/BlogPost?slug=smart-buildings-future" data-category="технологии">
+          <div class="blog-feature__media">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80" alt="Умные здания будущего">
+            <span class="blog-feature__badge">Избранное</span>
           </div>
-          <div class="diodus-why__card">
-            <div class="diodus-why__icon"><i class="fas fa-award"></i></div>
-            <h3>Premium Quality</h3>
-            <p>ISO 9001:2015 certified with industry-leading warranty</p>
+          <div class="blog-feature__body">
+            <span class="blog-feature__tag">технологии</span>
+            <h2 class="blog-feature__title">Умные здания будущего: как технологии меняют коммерческую недвижимость</h2>
+            <p class="blog-feature__text">Исследуем последние тренды в области интеллектуальных систем управления зданиями и их влияние на эффективность бизнеса. От IoT-датчиков до предиктивной аналитики — будущее уже здесь.</p>
+            <div class="blog-feature__meta">
+              <div><i class="fas fa-clock"></i> 7 мин</div>
+              <div><i class="fas fa-user"></i> Михаил Соколов</div>
+            </div>
+            <div class="blog-feature__cta">Читать далее <i class="fas fa-arrow-right"></i></div>
           </div>
-          <div class="diodus-why__card">
-            <div class="diodus-why__icon"><i class="fas fa-leaf"></i></div>
-            <h3>Sustainable Design</h3>
-            <p>Energy-efficient products with recyclable materials</p>
-          </div>
-          <div class="diodus-why__card">
-            <div class="diodus-why__icon"><i class="fas fa-bolt"></i></div>
-            <h3>Fast Lead Times</h3>
-            <p>Standard products within 2-3 weeks, custom within 4-6 weeks</p>
-          </div>
-          <div class="diodus-why__card">
-            <div class="diodus-why__icon"><i class="fas fa-shield-alt"></i></div>
-            <h3>Extended Warranty</h3>
-            <p>Up to 10 years warranty on selected product lines</p>
-          </div>
-          <div class="diodus-why__card">
-            <div class="diodus-why__icon"><i class="fas fa-ruler-combined"></i></div>
-            <h3>Custom Solutions</h3>
-            <p>Bespoke designs tailored to your project requirements</p>
-          </div>
-        </div>
+        </a>
       </div>
     </section>
 
-    <section class="diodus-lines">
+    <section class="blog-grid">
       <div class="container">
-        <div class="diodus-lines__header">
-          <span class="diodus-lines__eyebrow">Product Range</span>
-          <h2 class="diodus-lines__title">DIODUS Product Lines</h2>
-        </div>
-        <div class="diodus-lines__grid">
-          <article class="diodus-lines__card">
-            <div class="diodus-lines__media">
-              <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=600&q=80" alt="Linear Pro">
+        <div class="blog-grid__list" data-blog-list>
+          <a class="blog-card" href="/BlogPost?slug=moscow-business-center-case" data-category="кейсы,проекты">
+            <div class="blog-card__media">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80" alt="Кейс: автоматизация бизнес-центра класса А в Москве">
+              <span class="blog-card__badge">кейсы</span>
             </div>
-            <div class="diodus-lines__body">
-              <h3>Linear Pro</h3>
-              <p>Architectural linear lighting for offices, retail, and hospitality</p>
-              <div class="diodus-lines__tags">
-                <span>40W - 80W</span>
-                <span>CRI 95+</span>
-                <span>DALI-2 Ready</span>
-                <span>5 Year Warranty</span>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">Кейс: автоматизация бизнес-центра класса А в Москве</h3>
+              <p class="blog-card__text">История успешной реализации комплексного проекта автоматизации 25-этажного бизнес-центра. От концепции до запуска за 8 месяцев.</p>
+              <div class="blog-card__meta">
+                <div><i class="fas fa-clock"></i> 6 мин</div>
+                <div><i class="fas fa-user"></i> Александр Петров</div>
               </div>
             </div>
-          </article>
-          <article class="diodus-lines__card">
-            <div class="diodus-lines__media">
-              <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=600&q=80" alt="Downlight Elite">
-            </div>
-            <div class="diodus-lines__body">
-              <h3>Downlight Elite</h3>
-              <p>High-performance recessed downlights with superior glare control</p>
-              <div class="diodus-lines__tags">
-                <span>15W - 30W</span>
-                <span>UGR &lt; 19</span>
-                <span>IP44 Rated</span>
-                <span>Multiple Bezels</span>
-              </div>
-            </div>
-          </article>
-          <article class="diodus-lines__card">
-            <div class="diodus-lines__media">
-              <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=600&q=80" alt="Track Spot">
-            </div>
-            <div class="diodus-lines__body">
-              <h3>Track Spot</h3>
-              <p>Adjustable track lighting for retail and gallery applications</p>
-              <div class="diodus-lines__tags">
-                <span>25W - 50W</span>
-                <span>CRI 97</span>
-                <span>Beam Angles 15-60°</span>
-                <span>Color Options</span>
-              </div>
-            </div>
-          </article>
-          <article class="diodus-lines__card">
-            <div class="diodus-lines__media">
-              <img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=600&q=80" alt="Panel Max">
-            </div>
-            <div class="diodus-lines__body">
-              <h3>Panel Max</h3>
-              <p>Ultra-slim surface panels for modern commercial interiors</p>
-              <div class="diodus-lines__tags">
-                <span>40W</span>
-                <span>Tunable White</span>
-                <span>600x600 / 1200x300</span>
-                <span>Quick Install</span>
-              </div>
-            </div>
-          </article>
-          <article class="diodus-lines__card">
-            <div class="diodus-lines__media">
-              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Exterior Pro">
-            </div>
-            <div class="diodus-lines__body">
-              <h3>Exterior Pro</h3>
-              <p>Robust outdoor fixtures for facade and landscape applications</p>
-              <div class="diodus-lines__tags">
-                <span>IP66 / IK10</span>
-                <span>Marine Grade</span>
-                <span>RGB + White</span>
-                <span>10 Year Warranty</span>
-              </div>
-            </div>
-          </article>
-          <article class="diodus-lines__card">
-            <div class="diodus-lines__media">
-              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Emergency Series">
-            </div>
-            <div class="diodus-lines__body">
-              <h3>Emergency Series</h3>
-              <p>Self-contained emergency lighting meeting international codes</p>
-              <div class="diodus-lines__tags">
-                <span>3hr Duration</span>
-                <span>Self-Test</span>
-                <span>BS/EN Compliant</span>
-                <span>LiFePO4 Battery</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+          </a>
 
-    <section class="diodus-cert">
-      <div class="container">
-        <div class="diodus-cert__header">
-          <span class="diodus-cert__eyebrow">Quality Assurance</span>
-          <h2 class="diodus-cert__title">Certifications & Compliance</h2>
-        </div>
-        <div class="diodus-cert__grid">
-          <div class="diodus-cert__badge">CE</div>
-          <div class="diodus-cert__badge">UL</div>
-          <div class="diodus-cert__badge">ETL</div>
-          <div class="diodus-cert__badge">ENEC</div>
-          <div class="diodus-cert__badge">CB</div>
-          <div class="diodus-cert__badge">RoHS</div>
-          <div class="diodus-cert__badge">REACH</div>
-          <div class="diodus-cert__badge">Zhaga</div>
-        </div>
-      </div>
-    </section>
+          <a class="blog-card" href="/BlogPost?slug=energy-efficiency" data-category="инновации,технологии">
+            <div class="blog-card__media">
+              <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80" alt="Как повысить энергоэффективность здания">
+              <span class="blog-card__badge">инновации</span>
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">Как повысить энергоэффективность здания</h3>
+              <p class="blog-card__text">Практические советы по снижению энергопотребления и повышению экологичности коммерческой недвижимости.</p>
+              <div class="blog-card__meta">
+                <div><i class="fas fa-clock"></i> 5 мин</div>
+                <div><i class="fas fa-user"></i> Елена Волкова</div>
+              </div>
+            </div>
+          </a>
 
-    <section class="diodus-cta">
-      <div class="container diodus-cta__content">
-        <h2>Ready to Illuminate Your Project?</h2>
-        <p>Contact our lighting specialists to discuss your requirements and receive a customized product proposal.</p>
-        <a href="contacts.html" class="diodus-cta__button">Get Product Specifications <i class="fas fa-arrow-right"></i></a>
+          <a class="blog-card" href="/BlogPost?slug=industry-news" data-category="новости">
+            <div class="blog-card__media">
+              <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=1200&q=80" alt="Новости отрасли: умные системы">
+              <span class="blog-card__badge">новости</span>
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">Новости отрасли: умные системы</h3>
+              <p class="blog-card__text">Ключевые события, которые меняют рынок инженерных решений и автоматизации.</p>
+              <div class="blog-card__meta">
+                <div><i class="fas fa-clock"></i> 4 мин</div>
+                <div><i class="fas fa-user"></i> Команда LUXTECH</div>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
   </main>
@@ -381,7 +268,7 @@
         <div class="footer-col">
           <h4>Компания</h4>
           <ul>
-            <li><a href="about.html">О компании</a></li>
+            <li><a href="about.html">О нас</a></li>
             <li><a href="projects.html">Проекты</a></li>
             <li><a href="diodus.html">Бренд DIODUS</a></li>
             <li><a href="contacts.html">Контакты</a></li>
@@ -407,5 +294,26 @@
   </footer>
 
   <script src="../script.js"></script>
+  <script>
+    (function () {
+      const filterBar = document.querySelector('[data-blog-filters]');
+      const cards = document.querySelectorAll('[data-category]');
+      if (!filterBar || !cards.length) return;
+      filterBar.addEventListener('click', (event) => {
+        const button = event.target.closest('[data-filter]');
+        if (!button) return;
+        const value = button.dataset.filter;
+        filterBar.querySelectorAll('[data-filter]').forEach((btn) => {
+          btn.classList.toggle('blog-filters__button--active', btn === button);
+        });
+        cards.forEach((card) => {
+          const raw = card.dataset.category || '';
+          const categories = raw.split(',').map((item) => item.trim());
+          const matches = value === 'all' || categories.includes(value);
+          card.style.display = matches ? '' : 'none';
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
