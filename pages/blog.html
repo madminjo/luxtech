@@ -166,7 +166,7 @@
 
     <section class="blog-feature">
       <div class="container">
-        <a class="blog-feature__card" href="/BlogPost?slug=smart-buildings-future" data-category="технологии">
+        <a class="blog-feature__card" href="../blog/smart-buildings-future.html" data-category="технологии">
           <div class="blog-feature__media">
             <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80" alt="Умные здания будущего">
             <span class="blog-feature__badge">Избранное</span>
@@ -188,7 +188,7 @@
     <section class="blog-grid">
       <div class="container">
         <div class="blog-grid__list" data-blog-list>
-          <a class="blog-card" href="/BlogPost?slug=moscow-business-center-case" data-category="кейсы,проекты">
+          <a class="blog-card" href="../blog/moscow-business-center-case.html" data-category="кейсы,проекты">
             <div class="blog-card__media">
               <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80" alt="Кейс: автоматизация бизнес-центра класса А в Москве">
               <span class="blog-card__badge">кейсы</span>
@@ -203,7 +203,7 @@
             </div>
           </a>
 
-          <a class="blog-card" href="/BlogPost?slug=energy-efficiency" data-category="инновации,технологии">
+          <a class="blog-card" href="../blog/energy-efficiency.html" data-category="инновации,технологии">
             <div class="blog-card__media">
               <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80" alt="Как повысить энергоэффективность здания">
               <span class="blog-card__badge">инновации</span>
@@ -218,7 +218,7 @@
             </div>
           </a>
 
-          <a class="blog-card" href="/BlogPost?slug=industry-news" data-category="новости">
+          <a class="blog-card" href="../blog/industry-news.html" data-category="новости">
             <div class="blog-card__media">
               <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=1200&q=80" alt="Новости отрасли: умные системы">
               <span class="blog-card__badge">новости</span>
@@ -294,26 +294,5 @@
   </footer>
 
   <script src="../script.js"></script>
-  <script>
-    (function () {
-      const filterBar = document.querySelector('[data-blog-filters]');
-      const cards = document.querySelectorAll('[data-category]');
-      if (!filterBar || !cards.length) return;
-      filterBar.addEventListener('click', (event) => {
-        const button = event.target.closest('[data-filter]');
-        if (!button) return;
-        const value = button.dataset.filter;
-        filterBar.querySelectorAll('[data-filter]').forEach((btn) => {
-          btn.classList.toggle('blog-filters__button--active', btn === button);
-        });
-        cards.forEach((card) => {
-          const raw = card.dataset.category || '';
-          const categories = raw.split(',').map((item) => item.trim());
-          const matches = value === 'all' || categories.includes(value);
-          card.style.display = matches ? '' : 'none';
-        });
-      });
-    })();
-  </script>
 </body>
 </html>

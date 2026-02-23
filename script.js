@@ -160,6 +160,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    const mobileGroups = document.querySelectorAll('.nav-mobile__group');
+    mobileGroups.forEach(group => {
+        const title = group.querySelector('.nav-mobile__title');
+        if (!title) {
+            return;
+        }
+        title.setAttribute('role', 'button');
+        title.setAttribute('tabindex', '0');
+        title.setAttribute('aria-expanded', 'false');
+
+        const toggleGroup = () => {
+            const isOpen = group.classList.contains('is-open');
+            group.classList.toggle('is-open', !isOpen);
+            title.setAttribute('aria-expanded', String(!isOpen));
+        };
+
+        title.addEventListener('click', toggleGroup);
+        title.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                toggleGroup();
+            }
+        });
+    });
+
     const projectsPage = document.querySelector('.projects-page');
     if (projectsPage) {
         const searchInput = document.getElementById('projects-search');
@@ -168,35 +193,45 @@ document.addEventListener('DOMContentLoaded', () => {
         let activeFilter = 'all';
 
         const normalize = (value) => (value || '').toLowerCase().trim();
-        const matchesSearch = (card, query) => {
-            if (!query) {
-                return true;
+        const getCardCategory = (card) => {
+            if (card.dataset.category) {
+                return normalize(card.dataset.category);
             }
-            const haystack = [
-                card.dataset.title,
-                card.dataset.location,
-                card.dataset.tags,
-                card.dataset.year,
-            ]
-                .map(normalize)
-                .join(' ');
-            return haystack.includes(query);
+            const badge = card.querySelector('.projects-card__badge');
+            const badgeText = badge ? normalize(badge.textContent) : '';
+            const categoryMap = {
+                'коммерческие': 'commercial',
+                'жилые': 'residential',
+                'медицина': 'healthcare',
+                'образование': 'educational',
+                'промышленность': 'industrial',
+                'общественные': 'public'
+            };
+            return categoryMap[badgeText] || badgeText;
         };
-
-        const matchesFilter = (card, filter) => {
-            if (filter === 'all') {
-                return true;
-            }
-            return normalize(card.dataset.category) === filter;
+        const getCardText = (card) => {
+            const title = card.dataset.title || card.querySelector('h3')?.textContent;
+            const location = card.dataset.location || card.querySelector('.projects-card__location')?.textContent;
+            const tags = card.dataset.tags || Array.from(card.querySelectorAll('.projects-card__tags span')).map(t => t.textContent).join(' ');
+            const year = card.dataset.year || card.querySelector('.projects-card__stats span')?.textContent;
+            return normalize([title, location, tags, year].join(' '));
         };
 
         const applyFilters = () => {
             const query = normalize(searchInput ? searchInput.value : '');
             cards.forEach(card => {
-                const visible = matchesFilter(card, activeFilter) && matchesSearch(card, query);
+                const matchesCategory = activeFilter === 'all' || getCardCategory(card) === activeFilter;
+                const matchesQuery = !query || getCardText(card).includes(query);
+                const visible = matchesCategory && matchesQuery;
                 card.classList.toggle('projects-card--hidden', !visible);
+                card.style.display = visible ? '' : 'none';
             });
         };
+
+        const activeButton = filterButtons.find(button => button.classList.contains('projects-chip--active'));
+        if (activeButton) {
+            activeFilter = normalize(activeButton.dataset.filter);
+        }
 
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
@@ -209,6 +244,78 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (searchInput) {
             searchInput.addEventListener('input', applyFilters);
+            searchInput.addEventListener('change', applyFilters);
+        }
+
+        applyFilters();
+    }
+
+    const blogPage = document.querySelector('.blog-page');
+    if (blogPage) {
+        const filterBar = blogPage.querySelector('[data-blog-filters]');
+        const filterButtons = Array.from(blogPage.querySelectorAll('[data-filter], .blog-filters__button'));
+        const cards = Array.from(blogPage.querySelectorAll('[data-category]'));
+
+        if (filterBar && cards.length) {
+            const normalize = (value) => (value || '').toLowerCase().trim();
+            let activeFilter = 'all';
+            const activeButton = filterButtons.find(button => button.classList.contains('blog-filters__button--active'));
+            if (activeButton) {
+                activeFilter = normalize(activeButton.dataset.filter || activeButton.textContent);
+            }
+
+            const applyBlogFilters = () => {
+                cards.forEach(card => {
+                    const raw = card.dataset.category || '';
+                    const categories = raw.split(',').map(item => normalize(item));
+                    const matches = activeFilter === 'all' || categories.includes(activeFilter);
+                    card.style.display = matches ? '' : 'none';
+                });
+            };
+
+            filterBar.addEventListener('click', (event) => {
+                const button = event.target.closest('[data-filter], .blog-filters__button');
+                if (!button) return;
+                activeFilter = normalize(button.dataset.filter || button.textContent);
+                filterButtons.forEach(btn => btn.classList.toggle('blog-filters__button--active', btn === button));
+                applyBlogFilters();
+            });
+
+            applyBlogFilters();
+        }
+    }
+
+    const charityPage = document.querySelector('.charity-page');
+    if (charityPage) {
+        const buttons = Array.from(charityPage.querySelectorAll('.charity-filters__button'));
+        const cards = Array.from(charityPage.querySelectorAll('.charity-card'));
+        if (buttons.length && cards.length) {
+            const normalize = (value) => (value || '').toLowerCase().trim();
+            let activeFilter = 'all';
+            const activeButton = buttons.find(button => button.classList.contains('charity-filters__button--active'));
+            if (activeButton) {
+                activeFilter = normalize(activeButton.dataset.filter || activeButton.textContent);
+            }
+
+            const applyCharityFilters = () => {
+                cards.forEach(card => {
+                    const tag = card.querySelector('.charity-card__tag');
+                    const category = normalize(tag ? tag.textContent : '');
+                    const matches = activeFilter === 'all' || category === activeFilter;
+                    card.style.display = matches ? '' : 'none';
+                });
+            };
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    activeFilter = normalize(button.dataset.filter || button.textContent);
+                    buttons.forEach(btn => btn.classList.remove('charity-filters__button--active'));
+                    button.classList.add('charity-filters__button--active');
+                    applyCharityFilters();
+                });
+            });
+
+            applyCharityFilters();
         }
     }
 });
