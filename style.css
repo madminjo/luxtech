@@ -11,6 +11,7 @@
     --accent-orange: #ff8c00;
     --text-white: #ffffff;
     --primary: #2563EB;
+    --primarys:rgb(255, 255, 255);
     /* Bright Blue */
     --primary-dark: #1E40AF;
     --secondary: #F59E0B;
@@ -48,6 +49,18 @@ body {
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
+}
+
+.logosss {
+    width: 65px;
+    height: 65px;
+    /* background: var(--primarys); */
+    /* color: white; */
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
 }
 
 /* Hover Effects */
@@ -6058,8 +6071,8 @@ footer {
 .design-scope__grid {
 display: flex;
 align-items: center;
-justify-content: space-around;
-gap: 40px;
+justify-content: center;
+gap: 80px;
 padding: 40px 20px;
 }
 
@@ -6893,7 +6906,7 @@ padding: 40px 20px;
 }
 
 .charity-card__bar {
-    background: rgba(37, 99, 235, 0.15);
+    background: #e5e7eb;
     border-radius: 999px;
     height: 8px;
     overflow: hidden;
@@ -6902,7 +6915,7 @@ padding: 40px 20px;
 .charity-card__bar span {
     display: block;
     height: 100%;
-    background: #2563EB;
+    background: #000;
 }
 
 .charity-card__meta {
@@ -7109,7 +7122,7 @@ padding: 40px 20px;
 }
 
 .charity-detail__bar {
-    background: rgba(37, 99, 235, 0.15);
+    background: #e5e7eb;
     border-radius: 999px;
     height: 10px;
     overflow: hidden;
@@ -7119,7 +7132,7 @@ padding: 40px 20px;
 .charity-detail__bar span {
     display: block;
     height: 100%;
-    background: #2563EB;
+    background: #000;
 }
 
 .charity-detail__progress-meta {
