@@ -51,6 +51,24 @@ body {
     transform: translateY(0);
 }
 
+.about-partners__cert-img {
+    width: 100px;
+    height: 120px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.sssss {
+    width: 36px;
+    height: 36px;
+    background: #dde7ff;
+    color: white;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
 .logosss {
     width: 65px;
     height: 65px;
@@ -510,6 +528,12 @@ header .container {
 .stat-item p {
     font-size: 14px;
     color: var(--text-white-muted);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .scroll-indicator {
@@ -1174,6 +1198,10 @@ header .container {
 .step-item {
     position: relative;
     z-index: 1;
+display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .step-icon {
@@ -1947,10 +1975,20 @@ footer {
     .map-card {
         grid-template-columns: 1fr;
     }
+    .hero-grid {
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 60px;
+}
 
     .process-steps {
-        grid-template-columns: repeat(2, 1fr);
         gap: 40px;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .process-steps::before {
@@ -2015,6 +2053,8 @@ footer {
         flex-direction: column;
         gap: 20px;
         padding-top: 30px;
+        align-items: center;
+        justify-content: center;
     }
 
     .stat-item h3 {
