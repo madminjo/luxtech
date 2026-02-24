@@ -259,7 +259,7 @@ textarea {
 }
 
 .nav-chevron {
-    font-size: 10px;
+    font-size: 20px;
     margin-left: 6px;
     opacity: 0;
     transform: translateY(-1px);
@@ -5355,7 +5355,7 @@ footer {
 }
 
 .luxbrand-hero__accent {
-    color: #2563EB;
+    color: #F59E0B;
 }
 
 .luxbrand-hero__text {
@@ -6056,9 +6056,18 @@ footer {
 }
 
 .design-scope__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 60px;
+display: flex;
+align-items: center;
+justify-content: space-around;
+gap: 40px;
+padding: 40px 20px;
+}
+
+@media (max-width: 680px) {
+    .design-scope__grid {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .design-scope h2 {
@@ -7789,6 +7798,7 @@ footer {
     margin-bottom: 24px;
 }
 
+
 .diodus-hero__logo {
     width: 64px;
     height: 64px;
@@ -7814,10 +7824,17 @@ footer {
 }
 
 .diodus-hero__title span {
-    background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+    background: #C73888;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+.animAA {
+  transition: transform 0.3s ease;
+}
+
+.animAA:hover {
+  transform: translateY(-10px);
 }
 
 .diodus-hero__text {
